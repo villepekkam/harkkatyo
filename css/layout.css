@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background-color: rgb(245, 245, 245);
+    color: #222;
+}
+/* Header ja footer pohjaväri #5f3232, koska punainen on lempivärini. Body väri 245, 245, 245, ei täysin valkoinen, mutta ei iske silmille*/
+
+/* Laitetaan otsikoiden fontit googlesta haetun Oswald fontin mukaisiksi */
+h1, h2, h3 {
+    font-family: "Oswald", sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #5f3232;
+    color: rgb(245, 245, 245);
+    }
+
+.navigointi > ul{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.navigointi a {
+    color: rgb(245, 246, 245);
+    text-decoration: none;
+}
+
+/* MAIN-osa */
+
+.mma-info {
+    padding: 30px;
+    margin-bottom: 5px;
+    max-width: 1000px;
+}
+
+.mma-info p {
+    margin-bottom: 10px;
+}
+
+/* Lisätään vähän otsikon ja tekstin alle väliä */
+h2 {
+    margin-bottom: 30px;
+}
+
+.säännöt {
+    padding: 30px;
+    margin-bottom: 5px;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+/* Sisennetään luotteloja enemmän */
+.luettelot {
+    margin: 40px;
+}
+
+.luettelot ul {
+    padding-bottom: 10px;
+}
+
+.organisaatio-sektio {
+    padding: 30px;
+}
+
+.organisaatio-sektio h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.organisaatiot {
+    border: 2px solid #222;
+    padding: 5px;
+    text-align: center;
+}
+
+.organisaatiot a {
+    text-decoration: none;
+}
+
+/* Etusivun kuva koko sivun leveydelle ja leikataan vähän ylä ja alaosaa. Kuva itse otettu Ice Cage 8 tapahtumasta */
+.etusivu-kuva {
+    margin: 4% 0px;
+}
+
+.etusivu-kuva img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    object-position: center 45%;
+}
+
+/* Footeriin sama tyyli kuin headerissa, että pysyy yhtenäisyys */
+.footer {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #5f3232;
+    color: rgb(245, 245, 245) 
+}

@@ -1,45 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="">
+    <title>Vappaaottelu sivusto</title>
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 
-<title>Vappaaottelu kalenteri</title>
-
 <body>
-    <header>
+    <header class="header">
         <h1>Tervetuloa vapaaottelun maailmaan</h1>
-        <nav>
-            <a href="PFL">PFL</a>
-            <a href="ONE">One Championship</a>
+        <nav class="navigointi">
+            <ul>
+                <li><a href="pfl.html">PFL</a></li>
+                <li><a href="ONE">One Championship</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
         <article>
-            <h2>Mitä on vapaaottelu?</h2>
-            <!-- Jatkan tätä tekstiä vielä, mutta haluan rakennetta saada alkuun -->
-            <p>Nykyaikaisen vapaaottelun historia alkoi oikeastaan vuonna 1993, jolloin järjestettiin ensimmäinen The Ultimate Fighter turnaus. 
-             Laji ei vielä tuolloin ollut suuressa tietoisuudessa, mutta UFC:n myötä laji lähti kehittymään ja saamaan lisää näkyvyyttä.</p>
-             <h3>Vapaaottelun säännöt</h3>
-             <p>Vapaaottelussa otellaan kolme viiden minuutin erää tai jos on mestaruusottelu, niin tällöin viisi viiden minuutin erää</p>
-             <section>
-                <!-- Tämän osan haluan yhteen omaan korttiin sisälle. Koska tässä harkkatyössä ei käydä UFC:tä tai Oktagonia niin niille ei linkkejä -->
+            <section class="mma-info">
+                <h2>Mitä on vapaaottelu?</h2>
+                <p><strong>Vapaaottelu (MMA)</strong> on kamppailulaji, jossa yhdistyvät pystyottelu, paini ja
+                    mattotekniikat.
+                    Ottelijat voivat käyttää esimerkiksi nyrkkeilyn, potkunyrkkeilyn, painin, judon ja brasilialaisen
+                    jujutsun tekniikoita.
+                    Tavoitteena on voittaa vastustaja tyrmäyksellä, luovutuksella tai pisteillä.</p>
+                <p>Vapaaottelun juuret ulottuvat antiikin Kreikan pankrationiin, jossa yhdistettiin lyöntejä, potkuja ja
+                    painitekniikoita.
+                    Nykyaikainen vapaaottelu alkoi kehittyä 1900-luvun loppupuolella, kun eri kamppailulajien
+                    tehokkuutta alettiin vertailla samoissa otteluissa.
+                    Merkittävä käänne tapahtui vuonna 1993, kun UFC (Ultimate Fighting Championship) järjestettiin
+                    ensimmäisen kerran Yhdysvalloissa.
+                    Alkuvuosien vähäisistä säännöistä laji on kehittynyt turvallisemmaksi ja ammattimaisemmaksi
+                    urheiluksi, jolla on nykyään miljoonia seuraajia ympäri maailmaa.</p>
+                <p>Nykyään vapaaottelu on yksi maailman nopeimmin kasvaneista kamppailulajeista, ja ottelijat
+                    harjoittelevat monipuolisesti useita eri lajeja menestyäkseen kilpailuissa.
+                    Suomessa vapaaottelu on saavuttanut suuren suosion, ja suomalaiset ottelijat ovat menestyneet myös
+                    kansainvälisellä tasolla.
+                    Suomessa vapaaottelu onkin saanut paljon näkyvyyttää <strong>Ice Cage</strong> nimisen organisaation
+                    ansiosta.
+                    Lisäksi suomalaisia vapaaottelijoita on nähty UFC:ssä asti. Tähän mennessä siellä ovat kilpaileet
+                    Tony Halme, Tom Niinimäki, Anton Kuivanen, Makwan Amirkhani, Teemu Packalen sekä Abdul "Abba"
+                    Hussein.</p>
+            </section>
+            <!-- Tehdään luokat säännöille ja luetteloille, jotta saadaan hienommin jäsenneltyä ja sisennettyä luetteloa -->
+            <section class="säännöt">
+                <h3>Vapaaottelun säännöt</h3>
+                <p>Vapaaottelussa otellaan kolme viiden minuutin erää tai jos on mestaruusottelu, niin tällöin viisi
+                    viiden minuutin erää.</p>
+                <section class="luettelot">
+                    <p>Ottelun voi voittaa: </p>
+                    <ul>
+                        <li>Tyrmäyksellä</li>
+                        <li>Teknisellä tyrmäyksellä (TKO)</li>
+                        <li>Luovutuksella</li>
+                        <li>Tuomariäänin. Ottelu pistetytetään hallinnan, osumien, painin ja aktiivisuuden mukaan</li>
+                    </ul>
+                    <p>Sallitut tekniikat: </p>
+                    <ul>
+                        <li>Löynnit</li>
+                        <li>Potkut</li>
+                        <li>Polvipotkut</li>
+                        <li>Kyynäpäälyönnit</li>
+                        <li>Heitot, kaadot ja painitekniikat</li>
+                        <li>Kuristukset ja lukot</li>
+                    </ul>
+                    <p>Kielletyt tekniikat:</p>
+                    <ul>
+                        <li>Iskut takaraivoon</li>
+                        <li>Silmiin kohdistuvat iskut tai sormet silmiin</li>
+                        <li>Pureminen</li>
+                        <li>Hiuksista vetäminen</li>
+                        <li>Kurkuun tai nivusiin iskeminen</li>
+                        <li>Päähän potkiminen tai polvi-iskut päähän maassa olevan vastustajan päähän (poikkeuksena ONE
+                            Championship)</li>
+                    </ul>
+                </section>
+                <p>Ottelija käyttää pieniä vapaaottelu hanskoja, hammassuojia ja alasuojia. Ottelun voi tuomari
+                    keskeyttää, jos ottelija ei pysty puolustautumaan. <br>
+                    Lisäksi ottelijan omat kulmaajat (eli valmentajat ja tautajoukot) voivat heittää valkoisen pyyhkeen
+                    häkkiin luovutuksen merkiksi.</p>
+            </section>
+            <section class="organisaatio-sektio">
+                <!-- Tämän osan haluan yhteen omaan korttiin sisälle.
+
+                <!-- Tee tämä jonkinnäköiseen laatikkoon ja laita linkit noiden kyseisten orgn. nettisivuille -->
                 <h3>Vapaaotteluorganisaatioita</h3>
-                <p><strong>UFC</strong></p>
-                <p><Strong>PFL</Strong> <a href="PFL">Klikkaa tästä siirtyäksesi PFL sivuille</a></p>
-                <p><Strong>ONE Championship</Strong> <a href="ONE">Klikkaa tästä siirtyäksesi ONE Championship sivuille</a></p>
-                <p><strong>Oktagon</strong></p>
-             </section>
+                <div class="organisaatiot">
+                    <p><strong>UFC</strong> "Ultimate Fighting Championship": <a href="https://www.ufc.com/">Klikkaa
+                            tästä siirtyäksesi UFC:n sivuille</a></p>
+                    <p><Strong>PFL</Strong> "Professional Fighters League": <a href="https://pflmma.com/">Klikkaa tästä
+                            siirtyäksesi PFL sivuille</a></p>
+                    <p><Strong>ONE Championship:</Strong> <a href="https://www.onefc.com/">Klikkaa tästä siirtyäksesi
+                            ONE Championship sivuille</a></p>
+                    <p><strong>Oktagon:</strong> <a href="https://oktagonmma.com/en/">Klikkaa tästä siirtyäksesi Oktagon
+                            sivuille</a></p>
+                </div>
+            </section>
         </article>
 
-        <section>
+        <section class="etusivu-kuva">
             <!-- Tähän tulee kuva siitä vapaaotteluhäkistä -->
             <figure>
-
+                <img src="kuvat/hakki_millie_sani.jpg" alt="hakki-kuva">
             </figure>
             <figcaption>Vapaaotteluhäkki</figcaption>
         </section>
@@ -48,10 +117,11 @@
 
     </main>
 
-    <footer>
+    <footer class="footer">
         <p>Tervetuloa vapaaottelun maailmaan</p>
         <p>&copy;Ville Manninen</p>
     </footer>
-    
+
 </body>
+
 </html>

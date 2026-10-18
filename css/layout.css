@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
 }
@@ -9,39 +9,125 @@ body {
     background-color: rgb(245, 245, 245);
     color: #222;
 }
-/* Header ja footer pohjaväri #5f3232, koska punainen on lempivärini. Body väri 245, 245, 245, ei täysin valkoinen, mutta ei iske silmille*/
 
+/* Header ja footer pohjaväri #5f3232, koska punainen on lempivärini. Body väri 245, 245, 245, ei täysin valkoinen, mutta ei iske silmille*/
+/* Toinen ns. pääväri on sininen #394275 */
 /* Laitetaan otsikoiden fontit googlesta haetun Oswald fontin mukaisiksi */
-h1, h2, h3 {
+
+/* ********************************************************************************************************************************************* 
+Yleiset kaikille sivustoille olevat asetukset
+************************************************************************************************************************************************/
+
+
+h1,
+h2,
+h3 {
     font-family: "Oswald", sans-serif;
 }
 
+/* Header on stickyn kanssa, että säilyy rullatessakin ylhäällä */
+
 .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    min-height: 75px;
     background-color: #5f3232;
     color: rgb(245, 245, 245);
-    }
+    box-shadow: 0 2px 10px #0002;
+}
 
-.navigointi > ul{
+/* Päävalikko toimii hover tai tabulaattorila ja sen asetukset on tehty alle */
+
+.paavalikko {
     display: flex;
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin: 0;
     list-style: none;
 }
 
-.navigointi a {
+.paavalikko>li>a {
+    display: block;
+    padding: 15px 30px;
+    gap: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.paavalikko a {
     color: rgb(245, 246, 245);
     text-decoration: none;
 }
 
+.paavalikko a:hover,
+.paavalikko a:focus-visible {
+    background-color: #394275;
+}
+
+.pudotusvalikko {
+    position: relative;
+}
+
+.pudotusvalikko-valikko {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    display: none;
+    min-width: 200px;
+    margin: 0;
+    padding: 7px;
+    list-style: none;
+    background-color: rgb(245, 167, 167);
+}
+
+.pudotusvalikko-valikko a {
+    display: block;
+    padding: 10px 13px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.pudotusvalikko:hover .pudotusvalikko-valikko,
+.pudotusvalikko:focus-within .pudotusvalikko-valikko {
+    display: block;
+}
+
+#logo {
+    width: auto;
+    height: auto;
+}
+
+/* Footeriin sama tyyli kuin headerissa, että pysyy yhtenäisyys */
+.footer {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #5f3232;
+    color: rgb(245, 245, 245)
+}
+
+
+
+
+/*********************************************************************************************************************************************** 
+index.html asetukset 
+************************************************************************************************************************************************/
+
 /* MAIN-osa */
+
+/* En laittanut pääsivua gridiin tai flexboxiin, koska en näy siitä hyötyä. Haluan, että pääsivu on niinkuin on nyt */
 
 .mma-info {
     padding: 30px;
     margin-bottom: 5px;
-    max-width: 1000px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .mma-info p {
@@ -56,6 +142,8 @@ h2 {
 .säännöt {
     padding: 30px;
     margin-bottom: 5px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 h3 {
@@ -92,7 +180,7 @@ h3 {
 
 /* Etusivun kuva koko sivun leveydelle ja leikataan vähän ylä ja alaosaa. Kuva itse otettu Ice Cage 8 tapahtumasta */
 .etusivu-kuva {
-    margin: 4% 0px;
+    margin: 0px;
 }
 
 .etusivu-kuva img {
@@ -102,11 +190,235 @@ h3 {
     object-position: center 45%;
 }
 
-/* Footeriin sama tyyli kuin headerissa, että pysyy yhtenäisyys */
-.footer {
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    background-color: #5f3232;
-    color: rgb(245, 245, 245) 
+/* *************************************************************************************************************************************************************************
+pfl.html asetusket
+*************************************************************************************************************************************************************************** */
+
+/* Aikataulu ensin vasemmalle ja sitten sivupalkkikuva oikealle. Suomessa luetaan vasemmaltya oikealle ja tärkein tieto
+pitää löytyä ensimmäisenä. Vapaaottelun uusille seuraajille alemmas tietoa organisaatiosta ja tämän hetkiset mestarit */
+
+/* Grid valittu koska saadaan tällä sekä vierekkäin itemeitä, että allekkain */
+
+/* Grid rakentuu main osasta ja sivupalkista. Haluan, että header ja footer ovat joka sivulla samat samassa kohtaa.
+    main osa rakentuu useammasta gridistä */
+.container-pfl {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+        "main-pfl sivupalkki";
+    grid-template-rows: auto;
+    min-height: 950px;
+    gap: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
 }
+
+.main-pfl {
+    grid-area: main-pfl;
+}
+
+/* Sivupalkin asetukset. Sivupalkki koostuu kolmesta kuvasta */
+
+.sivupalkki {
+    grid-area: sivupalkki;
+}
+
+.sivupalkki img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Tapahtuma container rakenne omaan gridiin. Tulevat tapahtumat ylle ja menneet alle */
+.tapahtumat-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "tulevat"
+        "mennet";
+    gap: 100px;
+    max-width: 600px;
+    margin: 0;
+}
+
+/* PFL esittelyteksti siten, että teksti päällä ja taustalla näkyy vapaaotteluhanskoista kuva. */
+
+.pfl-esittely {
+    position: relative;
+}
+
+.esittely-teksti {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    z-index: 10;
+    background-color: #5f3232;
+    color: rgb(245, 245, 245);
+    opacity: 85%;
+    border-radius: 5%;
+    padding: 20px;
+}
+
+.pfl-hanskat img {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    display: block;
+    margin: 40px 0;
+}
+
+/* Mestarit taulukot omaan gridiin siten, että mihet vasemmalla ja naiset oikealla */
+
+.mestarit-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "h3 h3"
+        "miehet naiset";
+    gap: 20px 40px;
+    margin: 40px 0;
+    background-color: #394275;
+    padding: 20px;
+    box-shadow: 0 2px 10px #0002;
+    border-radius: 10px;
+    color: rgb(245, 245, 245);
+}
+
+.miehet {
+    grid-area: miehet;
+}
+
+.naiset {
+    grid-area: naiset;
+}
+
+/* *************************************************************************************************************************************************************************
+karate-combat.html sivun asetukset
+*************************************************************************************************************************************************************************** */
+
+/* main alue gridiin */
+
+.main-kc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 50px;
+    gap: 100px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+/* bannerin teko */
+
+.kc-banneri {
+    position: relative;
+    min-height: 380px;
+}
+
+.banneri-teksti {
+    position: absolute;
+    top: 10%;
+    transform: translateY(-10%);
+    left: 30px;
+    text-shadow: 0 2px 6px #0004;
+    max-width: 700px;
+    max-height: 500px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #5f323295;
+}
+
+.kc-banneri img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#banneri-otsikko {
+    font-size: 3rem;
+}
+
+/* Tästä alkaa tapahtumat container */
+
+.tapahtumat-container-kc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "tulevat-kc menneet-kc";
+    gap: 60px;
+}
+
+/* Tästä alkaa varusteet container. Laitetaan niin, että varustekuvaus vasemmalla, kuva oikealla */
+
+.kc-varusteet-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "kc-varusteet-teksti kc-varusteet-kuva";
+    gap: 75px;
+    padding: 12px 0;
+}
+
+.kc-varusteet-teksti {
+    grid-area: kc-varusteet-teksti;
+    padding: 20px;
+    background-color: #5f323295;
+    border-radius: 10px;
+    color: rgb(245, 245, 245);
+    text-shadow: 0 2px 6px #0004;
+}
+
+.kc-varusteet-kuva {
+    grid-area: kc-varusteet-kuva
+}
+
+.kc-varusteet-container img {
+    display: block;
+    width: 100%;
+}
+
+/* Tässä on esittelytekstikortin asetukset */
+
+.kc-esittely-teksti {
+    padding: 20px;
+    background-color: #39427588;
+    border-radius: 10px;
+    color: rgb(245, 245, 245);
+    text-shadow: 0 2px 6px #0004;
+}
+
+.kc-esittely-teksti h3 {
+    margin-top: 50px;
+}
+
+
+/* Tästä alkaa mestarit container. Otsikko, tämän alle niin, että miehet vasemmalla ja naiset oikealla */
+
+/* Mietin vielä taustavärejä ja laatikoita. Teem päätökset kun näen miltä taulukko näyttää */
+
+.mestarit-container-kc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "h3 h3"
+        "miehet-kc naiset-kc";
+    padding: 20px;
+    gap: 20px 40px;
+}
+
+.miehet-kc {
+    grid-area: miehet-kc;
+}
+
+.naiset-kc {
+    grid-area: naiset-kc;
+}
+
+/* **********************************************************************************************************************************
+     LOMAKE-sivu alkaa tästä 
+*************************************************************************************************************************************/
+
+/* Tänne tulee lomake sivuston asetukset. Sivusto on nyt vielä tyhjä, sillä haluan nähdä miten lomake tehdään ja sitten visioin tämän sivun.
+Ideana on kuitenkin, että tähän tehdään vaan lomake, jossa voi ehdottaa tapahtumaa ja lisätä lisätietoja siitä ja sähköposti-osoitteen.
+Muuuten tänne ei varmaan muuta tule kuin jokin kuva ehkä. */

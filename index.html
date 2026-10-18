@@ -13,16 +13,46 @@
 
 <body>
     <header class="header">
-        <h1>Tervetuloa vapaaottelun maailmaan</h1>
-        <nav class="navigointi">
-            <ul>
-                <li><a href="pfl.html">PFL</a></li>
-                <li><a href="ONE">One Championship</a></li>
+        <section id="logo">
+            <figure>
+                <img src="kuvat/logo.jpg" alt="logo">
+            </figure>
+        </section>
+        <nav>
+            <ul class="paavalikko">
+                <li><a href="#">Etusivu</a></li>
+                <!-- Pudotusvalikko vapaaotteluorganisaatioille ja muulle. Tosin tässä en nyt tehnyt kuin yhden vapaaotteluorganisaation sivut, mutta jos olisi muita niin ne tulisi tänne -->
+                <li class="pudotusvalikko">
+                    <a href="#vapaaottelu-organisaatiot">Vapaaottelu organisaatiot</a>
+                    <ul class="pudotusvalikko-valikko">
+                        <li><a href="pfl.html">PFL</a></li>
+                        <li><a href="ONE">One Championship</a></li>
+                        <li><a href="Oktagon">Oktagon MMA</a></li>
+                    </ul>
+                </li>
+                <li class="pudotusvalikko">
+                    <a href="#muut-organisaatiot">Muut organisaatiot</a>
+                    <ul class="pudotusvalikko-valikko">
+                        <li><a href="karate-combat.html">Karate Combat</a></li>
+                        <li><a href="Ice Cage">Ice Cage</a></li>
+                    </ul>
+                </li>
+                <li><a href="lomake.html">Ehdota tapahtumia</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <section class="etusivu-kuva">
+            <!-- Tähän tulee kuva siitä vapaaotteluhäkistä -->
+            <figure>
+                <img src="kuvat/hakki_millie_sani.jpg" alt="hakki-kuva">
+            </figure>
+            <figcaption>Vapaaotteluhäkki
+                <p>Kuva: Ville Manninen</p>
+            </figcaption>
+        </section>
+
         <article>
             <section class="mma-info">
                 <h2>Mitä on vapaaottelu?</h2>
@@ -101,24 +131,16 @@
                             ONE Championship sivuille</a></p>
                     <p><strong>Oktagon:</strong> <a href="https://oktagonmma.com/en/">Klikkaa tästä siirtyäksesi Oktagon
                             sivuille</a></p>
+                    <p><strong>Karate Combat:</strong> <a href="https://karate.com/">Klikkaa tästä siirtyäksesi Karate
+                            Combat sivuille</a></p>
                 </div>
             </section>
         </article>
 
-        <section class="etusivu-kuva">
-            <!-- Tähän tulee kuva siitä vapaaotteluhäkistä -->
-            <figure>
-                <img src="kuvat/hakki_millie_sani.jpg" alt="hakki-kuva">
-            </figure>
-            <figcaption>Vapaaotteluhäkki</figcaption>
-        </section>
-
-        <!-- Seuraavaksi voisi tulla se lomake tähän, jossa voi ehdottaa tapahtumaa tai organisaatiota lisättäväksi -->
-
     </main>
 
     <footer class="footer">
-        <p>Tervetuloa vapaaottelun maailmaan</p>
+        <p>Tervetuloa kamppailun maailmaan</p>
         <p>&copy;Ville Manninen</p>
     </footer>
 

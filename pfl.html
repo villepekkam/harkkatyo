@@ -8,19 +8,215 @@
     <link rel="stylesheet" href="/css/layout.css">
 </head>
 
-<!-- tehty vain alustava pohja ja tehty linkitys pääsivuun -->
-
 <body>
     <header class="header">
-        <h1>PFL tapahtumat</h1>
-        <nav class="navigointi">
-            <ul>
-                <li><a href="index.html">Pääsivu</a></li>
-                <li><a href="ONE">One Championship</a></li>
+        <section id="logo">
+            <figure>
+                <img src="kuvat/logo.jpg" alt="logo">
+            </figure>
+        </section>
+        <nav>
+            <ul class="paavalikko">
+                <li><a href="index.html">Etusivu</a></li>
+                <!-- Pudotusvalikko vapaaotteluorganisaatioille ja muulle. Tosin tässä en nyt tehnyt kuin yhden vapaaotteluorganisaation sivut, mutta jos olisi muita niin ne tulisi tänne -->
+                <li class="pudotusvalikko">
+                    <a href="#vapaaottelu-organisaatiot">Vapaaottelu organisaatiot</a>
+                    <ul class="pudotusvalikko-valikko">
+                        <li><a href="pfl.html">PFL</a></li>
+                        <li><a href="ONE">One Championship</a></li>
+                        <li><a href="Oktagon">Oktagon MMA</a></li>
+                    </ul>
+                </li>
+                <li class="pudotusvalikko">
+                    <a href="#muut-organisaatiot">Muut organisaatiot</a>
+                    <ul class="pudotusvalikko-valikko">
+                        <li><a href="karate-combat.html">Karate Combat</a></li>
+                        <li><a href="Ice Cage">Ice Cage</a></li>
+                    </ul>
+                </li>
+                <li><a href="lomake.html">Ehdota tapahtumia</a></li>
             </ul>
         </nav>
     </header>
+    <!-- Rakennetaan containerin sisälle grid siten, että koko sivulla on sidebar ja sitten sisältö. Taulukot tulevat omaan gridiin -->
+    <div class="container-pfl">
+        <main class="main-pfl">
+            <article class="tapahtumat-container">
+                <section class="tulevat">
+                    <h3>Tulevat tapahtumat</h3>
+                    <table>
+                        <tr>
+                            <th>Tapahtuma</th>
+                            <th>Päivämäärä</th>
+                            <th>Kellonaika Suomessa</th>
+                        </tr>
+                        <tr>
+                            <td>PFL CHICAGO 2</td>
+                            <td>16.10.2026</td>
+                            <td>klo. 00.00</td>
+                        </tr>
+                        <tr>
+                            <td>PFL DUBAI</td>
+                            <td>14.11.2026</td>
+                            <td>klo. 20.00</td>
+                        </tr>
+                        <tr>
+                            <td>PFL MENA</td>
+                            <td>11.12.2026</td>
+                            <td>klo. 22.45</td>
+                        </tr>
+                        <tr>
+                            <td>PFL LYON</td>
+                            <td>11.12.2026</td>
+                            <td>klo. 22.00</td>
+                        </tr>
+                    </table>
+                </section>
+                <section class="menneet">
+                    <h3>Menneet tapahtumat</h3>
+                    <table>
+                        <tr>
+                            <th>Tapahtuma</th>
+                            <th>Päivämäärä</th>
+                            <th>Täältä löytyy tallenne</th>
+                        </tr>
+                        <tr>
+                            <td>PFL AFRICA MOROCCO</td>
+                            <td>10.10.2026</td>
+                            <td>ei saatavilla</td>
+                        </tr>
+                        <tr>
+                            <td>PFL MENA 11</td>
+                            <td>2.10.2026</td>
+                            <td><a href="https://www.youtube.com/watch?v=usaGlDx08tw&t=363s">MENA 11 youtube-linkki</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>PFL MENA 11</td>
+                            <td>28.8.2026</td>
+                            <td><a href="https://www.youtube.com/watch?v=x1zHUgLFSfU">Tampa youtube-linkki</a></td>
+                        </tr>
+                    </table>
+                </section>
+            </article>
+            <!-- Tähän tulee esittelytekstit PFL:stä sekä itse ottama kuva hanskoista-->
+            <article class="pfl-esittely">
+                <section class="esittely-teksti">
+                    <h2>Mikä on PFL</h2>
+                    <p>Professional Fighters League (<strong>PFL</strong>) on kansainvälinen vapaaotteluorganisaatio,
+                        joka
+                        järjestää tapahtumia ympäri maailmaa. PFL on perustettu vuonna 2017
+                        PFL tunnetaan ainutlaatuisesta kausimuotoisesta kilpailujärjestelmästään, jossa ottelijat
+                        keräävät
+                        pisteitä runkosarjassa ja etenevät pudotuspeleihin taistellakseen mestaruudesta.
+                        Organisaatio kuuluu maailman johtaviin kamppailu-urheilubrändeihin.</p>
+                    <p> Vuonna 2023 PFL osti kilpailevan vapaaottelupromotion nimeltä <strong>Bellator</strong> ja
+                        samalla
+                        sai
+                        kaikki Bellatorin alla urheilevat vapaaottelijat omalle listalleen. Vuonna 2026 Jake Paulin
+                        omistama
+                        <strong>Most Valuable Promotions</strong> fuusioitui PFL:n kanssa.
+                    </p>
+                    <p>
+                        Painoluokat PFL:ssä ovat miehilillä 120,2 kg (Heavyweight), 93,0 kg (Light heavyweight), 83,9 kg
+                        (Middleweight)
+                        77,1 kg (Welterweight), 70,3 kg (Lightweight), 65,8 kg (Featherweight), 61,2 kg (Bantamweight)
+                        ja
+                        naisilla 56,7 kg (Womens's flyweight)
+                    </p>
+                </section>
+                <section class="pfl-hanskat">
+                    <figure>
+                        <img src="kuvat/pfl_hanskat.jpg" alt="PFL pfl-hanskat">
+                        <figcaption>
+                            Kuva: Ville Manninen
+                        </figcaption>
+                    </figure>
+                </section>
+            </article>
+            <!-- Tähän tulee taulukot mestareista -->
+            <article class="mestarit-container">
+                <h3>Hallitsevat mestarit</h3>
+                <section class="miehet">
+                    <h4>Miehet</h4>
+                    <table>
+                        <tr>
+                            <th>Nimi</th>
+                            <th>Kansallisuus</th>
+                            <th>Painoluokka</th>
+                        </tr>
+                        <tr>
+                            <td>Vadim Nemkov</td>
+                            <td>Venäjä</td>
+                            <td>Heavyweight</td>
+                        </tr>
+                        <tr>
+                            <td>Corey Anderson</td>
+                            <td>Yhdysvallat</td>
+                            <td>Light Heavyweight</td>
+                        </tr>
+                        <tr>
+                            <td>Costello Van Steenis</td>
+                            <td>Espanja</td>
+                            <td>Middleweight</td>
+                        </tr>
+                        <tr>
+                            <td>Thad Jean</td>
+                            <td>Yhdysvallat</td>
+                            <td>Welterweight</td>
+                        </tr>
+                        <tr>
+                            <td>Usman Nurmagomedov</td>
+                            <td>Venäjä</td>
+                            <td>Lightweight</td>
+                        </tr>
+                        <tr>
+                            <td>Razhabali Shaydullaev</td>
+                            <td>Kirgisia</td>
+                            <td>Featherweight</td>
+                        </tr>
+                        <tr>
+                            <td>Ei ole tällä hetkellä mestaria</td>
+                            <td></td>
+                            <td>Bantamweight</td>
+                        </tr>
+                    </table>
+                </section>
+                <section class="naiset">
+                    <h4>Naiset</h4>
+                    <table>
+                        <tr>
+                            <th>Nimi</th>
+                            <th>Kansallisuus</th>
+                            <th>Painoluokka</th>
+                        </tr>
+                        <tr>
+                            <td>Ei ole tällä hetkellä mestaria</td>
+                            <td></td>
+                            <td>Women's flyweight</td>
+                        </tr>
+                    </table>
+                </section>
+            </article>
+        </main>
+        <!-- Sivupalkin kuvat. Kaikki kuvat on tekoälyllä tehtyjä. Ylin on puhtaasti pyydetty tekoälyltä, kaksi alempaa on minusta 5 vuoden takaa ja tekoälyllä muokattuja -->
+        <aside class="sivupalkki">
+            <figure>
+                <img src="kuvat/pfl sivupalkki kuva.png" alt="PFL sivukuva">
+            </figure>
+            <figure>
+                <img src="kuvat/profiilikuva.png" alt="Ottelija sivukuva">
+            </figure>
+            <figure>
+                <img src="kuvat/pofiilikuva2.png" alt="Toinen ottelijasivukuva">
+            </figure>
+        </aside>
+    </div>
 
+    <footer class="footer">
+        <p>Tervetuloa kamppailun maailmaan</p>
+        <p>&copy;Ville Manninen</p>
+    </footer>
 </body>
 
 </html>

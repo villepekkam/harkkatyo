@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PFL sivusto ja kalenteri</title>
     <link rel="stylesheet" href="css/layout.css">
+    <link rel="icon" href="kuvat/logo/icon.svg" type="image/svg+xml">
 </head>
 
 <body>
@@ -125,13 +126,23 @@
                         naisilla 56,7 kg (Womens's flyweight)
                     </p>
                 </section>
+                <!-- Kuvien kokoa pienennetty ja eri skaalauksia kuvista. -->
                 <section class="pfl-hanskat">
-                    <figure>
-                        <img src="kuvat/pfl_hanskat.jpg" alt="PFL pfl-hanskat">
+                    <picture>
+                        <source type="image/avif" srcset="kuvat/pfl_hanskat_v2.avif 4004w,
+                                kuvat/pfl_hanskat_v2_1280.avif 1280w,
+                                kuvat/pfl_hanskat_v2_640.avif 640w" sizes="100vw">
+
+                        <source type="image/webp" srcset="kuvat/pfl_hanskat_v2.webp 4004w,
+                                kuvat/pfl_hanskat_v2_1280.webp 1280w,
+                                kuvat/pfl_hanskat_v2_640.webp 640w" sizes="100vw">
+
+                        <img src="kuvat/pfl_hanskat_v2.jpg" alt="PFL pfl-hanskat" width="4004" height="2860"
+                            fetchpriority="high">
                         <figcaption>
                             Kuva: Ville Manninen
                         </figcaption>
-                    </figure>
+                    </picture>
                 </section>
             </article>
             <!-- Tähän tulee taulukot mestareista -->
@@ -200,16 +211,34 @@
             </article>
         </main>
         <!-- Sivupalkin kuvat. Kaikki kuvat on tekoälyllä tehtyjä. Ylin on puhtaasti pyydetty tekoälyltä, kaksi alempaa on minusta 5 vuoden takaa ja tekoälyllä muokattuja -->
+         <!-- Sivupalkin kuvien kokoa myös pienennetty. -->
         <aside class="sivupalkki">
-            <figure>
-                <img src="kuvat/pfl sivupalkki kuva.png" alt="PFL sivukuva">
-            </figure>
-            <figure>
-                <img src="kuvat/profiilikuva.png" alt="Ottelija sivukuva">
-            </figure>
-            <figure>
-                <img src="kuvat/pofiilikuva2.png" alt="Toinen ottelijasivukuva">
-            </figure>
+            <picture>
+                <source type="image/avif" srcset="kuvat/pfl sivupalkki kuva_v2.avif 1024w,
+                            kuvat/pfl sivupalkki kuva_v2_640.avif 640w" sizes="100vw">
+
+                <source type="image/webp" srcset="kuvat/pfl sivupalkki kuva_v2.webp 1024w,
+                            kuvat/pfl sivupalkki kuva_v2_640.webp 640w" sizes="100vw">
+
+                <img src="kuvat/pfl sivupalkki kuva_v2.jpg" alt="PFL sivukuva" width="1024" height="1536" fetchpriority="high">
+            </picture>
+            <picture>
+                <source type="image/avif" srcset="kuvat/profiilikuva_v2.avif 1024w,
+                            kuvat/profiilikuva_v2_640.avif 640w" sizes="100vw">
+
+                <source type="image/webp" srcset="kuvat/profiilikuva_v2.webp 1024w,
+                            kuvat/profiilikuva_v2_640.webp 640w" sizes="100vw">
+                <img src="kuvat/profiilikuva_v2.jpg" alt="Ottelija sivukuva" width="1024" height="1536" fetchpriority="high">
+            </picture>
+            <picture>
+                <source type="image/avif" srcset="kuvat/profiilikuva2_v2.avif 1024w,
+                            kuvat/profiilikuva2_v2_640.avif 640w" sizes="100vw">
+
+                <source type="image/webp" srcset="kuvat/profiilikuva2_v2.webp 1024w,
+                            kuvat/profiilikuva2_v2_640.webp 640w" sizes="100vw">
+                <img src="kuvat/profiilikuva2_v2.jpg" alt="Toinen ottelija sivukuva" width="1024" height="1536" fetchpriority="high">
+            </picture>
+            <figcaption> Kuvat tehty tekoälyllä. Mallina minä monta vuotta sitten</figcaption>
         </aside>
     </div>
 

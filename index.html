@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="kuvat/logo/icon.svg" type="image/svg+xml">
 </head>
 
 <body>
@@ -45,12 +46,21 @@
     <main>
         <section class="etusivu-kuva">
             <!-- Tähän tulee kuva siitä vapaaotteluhäkistä -->
-            <figure>
-                <img src="kuvat/hakki_millie_sani.jpg" alt="hakki-kuva">
-            </figure>
-            <figcaption>Vapaaotteluhäkki
-                <p>Kuva: Ville Manninen</p>
-            </figcaption>
+            <!-- Kuvien kokoa pienennetty ja eri skaalauksia kuvista. -->
+            <picture>
+                <source type="image/avif" srcset="kuvat/hakki_millie_sani_v2.avif 3072w,
+                        kuvat/hakki_millie_sani_v2_1280.avif 1280w,
+                        kuvat/hakki_millie_sani_v2_640.avif 640w" sizes="100vw">
+
+                <source type="image/webp" srcset="kuvat/hakki_millie_sani_v2.webp 3072w,
+                        kuvat/hakki_millie_sani_v2_1280.webp 1280w,
+                        kuvat/hakki_millie_sani_v2_640.webp 640w" sizes="100vw">
+
+                <img src="kuvat/hakki_millie_sani_v2.jpg" alt="häkki kuva" width="3072" height="4096" fetchpriority="high">
+                <figcaption>Vapaaotteluhäkki
+                    <p>Kuva: Ville Manninen</p>
+                </figcaption>
+            </picture>
         </section>
 
         <article>

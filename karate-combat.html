@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Karate Combat sivusto ja kalenteri</title>
     <link rel="stylesheet" href="css/layout.css">
+    <link rel="icon" href="kuvat/logo/icon.svg" type="image/svg+xml">
 </head>
 
 <body>
@@ -30,7 +31,7 @@
                 <li class="pudotusvalikko">
                     <a href="#muut-organisaatiot">Muut organisaatiot</a>
                     <ul class="pudotusvalikko-valikko">
-                        <li><a href="karate-combat">Karate Combat</a></li>
+                        <li><a href="karate-combat.html">Karate Combat</a></li>
                         <li><a href="Ice Cage">Ice Cage</a></li>
                     </ul>
                 </li>
@@ -39,10 +40,20 @@
         </nav>
     </header>
     <!-- Banneri rakentuu kuvasta ja päälle teksti. Bannerin kuvan olen itse piirtänyt Samsung Galaxy Tab S9 Penup sovelluksella -->
+    <!-- Kuvien kokoa pienennetty ja eri skaalauksia kuvista. -->
     <section class="kc-banneri">
-        <figure>
-            <img src="kuvat/kc_pit.jpg" alt="kc-areena">
-        </figure>
+        <picture>
+            <source type="image/avif" srcset="kuvat/kc_pit_v2.avif 1504w,
+                    kuvat/kc_pit_v2.avif 1280w,
+                    kuvat/kc_pit_v2.avif 640w" sizes="100vw">
+            <source type="image/webp" srcset="kuvat/kc_pit_v2.webp 1504w,
+                    kuvat/kc_pit_v2.webp,
+                    kuvat/kc_pit_v2.webp 640w" sizes="100vw">
+            <img src="kuvat/kc_pit_v2.jpg" alt="kc-areena" width="1504" height="986" fetchpriority="high">
+            <figcaption>Karate Combat areena
+                <p>Piirtänyt: Ville Manninen</p>
+            </figcaption>
+        </picture>
         <div class="banneri-teksti">
             <h1 id="banneri-otsikko">Karate Combat</h1>
             <p>Pystylajeista kiinnostuneille</p>
@@ -139,7 +150,7 @@
                 </p>
             </section>
         </article>
-        <article class="kc-varusteet-container">
+        <article class="kc-varusteet">
             <section class="kc-varusteet-teksti">
                 <h2>Varusteet</h2>
                 <p>Karate Combatissa käytetään 4oz hanskoja, alasuojia miehillä, hammassuojia ja pitkiä
@@ -151,14 +162,24 @@
                     ole koskaan treenanneet karatea ja siten eivät omista mustaa vyötä.
                 </p>
             </section>
+            </article>
+            <section class="kc-varusteet-kuva">
+                <picture>
+                    <source type="image/avif" srcset="kuvat/kc_vaatteet_v2.avif 2732w,
+                        kuvat/kc_vaatteet_v2_1280.avif 1280w,
+                        kuvat/kc_vaatteet_v2_640.avif 640w" sizes="100vw">
 
-            <figure class="kc-varusteet-kuva">
-                <img src="kuvat/kc_vaatteet.jpg" alt="Karate Combat-vaatteet">
-                <figcaption>
-                    Kuva: Ville Manninen
-                </figcaption>
-            </figure>
-        </article>
+                    <source type="image/webp" srcset="kuvat/kc_vaatteet_v2.webp 2732w,
+                        kuvat/kc_vaatteet_v2_1280.webp 1280w,
+                        kuvat/kc_vaatteet_v2_640.webp 640w" sizes="100vw">
+
+                    <img src="kuvat/kc_vaatteet_v2.jpg" alt="Karate Combat-vaatteet" width="2732" height="3142" fetchpriority="high">
+                    <figcaption>
+                        Kuva: Ville Manninen
+                    </figcaption>
+                </picture>
+            </section>
+        
         <div class="mestarit-container-kc">
             <h3>Hallitsevat mestarit</h3>
             <section class="miehet-kc">

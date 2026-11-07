@@ -105,8 +105,6 @@ h3 {
 
 /* Footeriin sama tyyli kuin headerissa, että pysyy yhtenäisyys */
 .footer {
-    justify-content: space-between;
-    align-items: center;
     padding: 0 20px;
     background-color: #5f3232;
     color: rgb(245, 245, 245)
@@ -209,6 +207,7 @@ pitää löytyä ensimmäisenä. Vapaaottelun uusille seuraajille alemmas tietoa
     grid-template-rows: auto;
     min-height: 950px;
     gap: 100px;
+    /* gap on näin iso, koska haluan sivupalkkia erilleen muusta sisällöstä */
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px;
@@ -226,7 +225,7 @@ pitää löytyä ensimmäisenä. Vapaaottelun uusille seuraajille alemmas tietoa
 
 .sivupalkki img {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: block;
 }
 
@@ -303,7 +302,7 @@ karate-combat.html sivun asetukset
     display: grid;
     grid-template-columns: 1fr 1fr;
     min-height: 50px;
-    gap: 100px;
+    gap: 20px;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -332,8 +331,13 @@ karate-combat.html sivun asetukset
 
 .kc-banneri img {
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
+}
+
+.kc-banneri figcaption {
+    margin-left: 10%;
 }
 
 #banneri-otsikko {
@@ -349,19 +353,10 @@ karate-combat.html sivun asetukset
     gap: 60px;
 }
 
-/* Tästä alkaa varusteet container. Laitetaan niin, että varustekuvaus vasemmalla, kuva oikealla */
-
-.kc-varusteet-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-        "kc-varusteet-teksti kc-varusteet-kuva";
-    gap: 75px;
-    padding: 12px 0;
-}
+/* Varuste container otettu pois. Ei toiminut visuaalisesti. Parempi, että antaa main grid hoitaa homma
+ja laittaa tekstin ja kuvan vierekkain ja gridin seuraavalta riviltä alkaa mestarit taulukko.*/
 
 .kc-varusteet-teksti {
-    grid-area: kc-varusteet-teksti;
     padding: 20px;
     background-color: #5f323295;
     border-radius: 10px;
@@ -369,13 +364,11 @@ karate-combat.html sivun asetukset
     text-shadow: 0 2px 6px #0004;
 }
 
-.kc-varusteet-kuva {
-    grid-area: kc-varusteet-kuva
-}
 
-.kc-varusteet-container img {
+.kc-varusteet-kuva img {
     display: block;
     width: 100%;
+    height: 100%;
 }
 
 /* Tässä on esittelytekstikortin asetukset */
@@ -407,6 +400,11 @@ karate-combat.html sivun asetukset
     gap: 20px 40px;
 }
 
+.mestarit-container-kc h3 {
+    grid-area: h3;
+    margin: 0;
+}
+
 .miehet-kc {
     grid-area: miehet-kc;
 }
@@ -422,3 +420,22 @@ karate-combat.html sivun asetukset
 /* Tänne tulee lomake sivuston asetukset. Sivusto on nyt vielä tyhjä, sillä haluan nähdä miten lomake tehdään ja sitten visioin tämän sivun.
 Ideana on kuitenkin, että tähän tehdään vaan lomake, jossa voi ehdottaa tapahtumaa ja lisätä lisätietoja siitä ja sähköposti-osoitteen.
 Muuuten tänne ei varmaan muuta tule kuin jokin kuva ehkä. */
+
+.main-lomake {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 50px;
+    gap: 50px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.otsikko-lomake {
+    padding: 20px;
+    background-color: #5f323295;
+    border-radius: 10px;
+    color: rgb(245, 245, 245);
+    text-shadow: 0 2px 6px #0004;
+}

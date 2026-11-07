@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tapahtuman ehdotuslomake</title>
     <link rel="stylesheet" href="css/layout.css">
+    <link rel="icon" href="kuvat/logo/icon.svg" type="image/svg+xml">
 </head>
 
 <body>
@@ -30,7 +31,7 @@
                 <li class="pudotusvalikko">
                     <a href="#muut-organisaatiot">Muut organisaatiot</a>
                     <ul class="pudotusvalikko-valikko">
-                        <li><a href="karate-combat">Karate Combat</a></li>
+                        <li><a href="karate-combat.html">Karate Combat</a></li>
                         <li><a href="Ice Cage">Ice Cage</a></li>
                     </ul>
                 </li>
@@ -38,16 +39,30 @@
             </ul>
         </nav>
     </header>
-
-    <main>
-        <article>
+    <!-- Tälle sivulle tulee lomake, jossa voi täyttää tapahtuma-ilmoituslomakkeen ja lisäksi video
+     Videon kuva on logo, sillä en saanut fiksusti puhelimesta tallennettua videosta kuvaa tuohon, enkä 
+     jaksanut enää lavastaa kuvaa videolle. Videossa olen minä, musiikki on itse kitaralla tekoälylle nauhoitettu ja tekoäly
+     generoinut musiikin. Eli copyrights kunnossa -->
+    <main class="main-lomake">
             <section class="otsikko-lomake">
-                <h2>Onko tapahtumia/organisaatioita, joita täällä pitäisi näykyä?</h2>
+                <h2>Onko tapahtumia/organisaatioita, joita täällä pitäisi näkyä?</h2>
                 <p>Ilmoita tänne lomakkeeseen tapahtumia/organisaatioita, joita haluaisit tämän sivuston seuraavan
                 </p>
             </section>
+        <section class="nyrkkeily-video">
+            <video controls="metadata" poster="kuvat/video_kuva_v2.jpg" width="640" height="480">
+                <source src="media/nyrkkeily_video.mp4">
+            </video>
+        </section>
+        <section class="lomake-taytto">
+            <h3>Ilmoita tapahtuma/organisaatio</h3>
+            <p>Tähdellä (*) merkityt ovat pakollisia</p>
+            <form action="#" method="post">
+                <!-- Jatkan tätä seuraavaan palautukseen -->
 
-        </article>
+            </form>
+        </section>
+
     </main>
     <footer class="footer">
         <p>Tervetuloa kamppailun maailmaan</p>

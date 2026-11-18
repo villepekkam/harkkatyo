@@ -288,8 +288,17 @@ pitää löytyä ensimmäisenä. Vapaaottelun uusille seuraajille alemmas tietoa
     grid-area: miehet;
 }
 
+/* Lisätään vähän rakoa otsikon ja taulukon väliin niin on siistimpi tässä osiossa */
+.miehet h4 {
+    padding-bottom: 20px;
+}
+
 .naiset {
     grid-area: naiset;
+}
+
+.naiset h4 {
+    padding-bottom: 20px;
 }
 
 /* *************************************************************************************************************************************************************************
@@ -398,6 +407,9 @@ ja laittaa tekstin ja kuvan vierekkain ja gridin seuraavalta riviltä alkaa mest
         "miehet-kc naiset-kc";
     padding: 20px;
     gap: 20px 40px;
+    background-color: #5f323295;
+    color: rgb(245, 245, 245);
+    border-radius: 10px;
 }
 
 .mestarit-container-kc h3 {
@@ -409,8 +421,16 @@ ja laittaa tekstin ja kuvan vierekkain ja gridin seuraavalta riviltä alkaa mest
     grid-area: miehet-kc;
 }
 
+.miehet-kc h4 {
+    padding-bottom: 20px;
+}
+
 .naiset-kc {
     grid-area: naiset-kc;
+}
+
+.naiset-kc h4 {
+    padding-bottom: 20px;
 }
 
 /* **********************************************************************************************************************************
@@ -424,6 +444,9 @@ Muuuten tänne ei varmaan muuta tule kuin jokin kuva ehkä. */
 .main-lomake {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "otsikko-lomake nyrkkeily-video"
+        "lomake-taytto lomake-taytto";
     min-height: 50px;
     gap: 50px;
     width: 100%;
@@ -433,9 +456,122 @@ Muuuten tänne ei varmaan muuta tule kuin jokin kuva ehkä. */
 }
 
 .otsikko-lomake {
+    grid-area: otsikko-lomake;
+}
+
+.nyrkkeily-video {
+    grid-area: nyrkkeily-video;
+}
+
+.otsikko-lomake {
     padding: 20px;
     background-color: #5f323295;
     border-radius: 10px;
     color: rgb(245, 245, 245);
     text-shadow: 0 2px 6px #0004;
+}
+
+.lomake-taytto {
+    grid-area: lomake-taytto;
+    justify-content: center;
+    max-width: 80%;
+    padding-left: 20%;
+}
+
+.lomake-taytto p {
+    padding-bottom: 10px;
+}
+
+form {
+    background-color: #5f323295;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 6px;
+    color: rgb(245, 245, 245);
+}
+
+fieldset {
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+.kentta {
+    margin-bottom: 15px;
+}
+
+.kentta:last-child {
+    margin-bottom: 0;
+}
+
+.kentta label {
+    display: block;
+}
+
+input:not([type="radio"], [type="checkbox"]),
+select,
+textarea {
+    display: block;
+    width: 100%;
+}
+
+input:user-invalid,
+select:user-invalid,
+textarea:user-invalid {
+    border: 2px solid red;
+    /* Punainen ei ole paras virheväri tässä kohtaa, tiedän sen. Mutta haluan pohjan olevan
+    formilla punainen niin menee värimaailman mukaan ja error väri on punainen melkeen kaikkialla
+    yleensä. */
+}
+
+.painikkeet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #394275;
+    color: rgb(245, 245, 245);
+    border-radius: 6px;
+    border: 0;
+}
+
+button:hover {
+    background-color: rgb(245, 167, 167);
+}
+
+.tyhjenna {
+    background-color: #5f323295;
+}
+
+/* Taulukot ovat Karate Combat ja PFL sivuilla. Tehdään molempiin sivuihin 
+samanlaiset taulukkoasettelut */
+
+/* Ehkä olisi ollut parempi, että kaikilla taulukoilla ei ole samat asetukset. Oli vaikea löytää
+otsikolle taustaväriä, joka jotenkuten sopisi valkoiseen, punaiseen ja siniseen taustaan */
+
+table {
+    width: 100%;
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 6px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 2px solid black;
+    text-align: left;
+    padding: 10px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(236, 236, 117, 0.13);
+}
+
+thead {
+    background-color: rgb(233, 195, 146);
 }

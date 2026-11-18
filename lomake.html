@@ -44,22 +44,98 @@
      jaksanut enää lavastaa kuvaa videolle. Videossa olen minä, musiikki on itse kitaralla tekoälylle nauhoitettu ja tekoäly
      generoinut musiikin. Eli copyrights kunnossa -->
     <main class="main-lomake">
-            <section class="otsikko-lomake">
-                <h2>Onko tapahtumia/organisaatioita, joita täällä pitäisi näkyä?</h2>
-                <p>Ilmoita tänne lomakkeeseen tapahtumia/organisaatioita, joita haluaisit tämän sivuston seuraavan
-                </p>
-            </section>
+        <section class="otsikko-lomake">
+            <h2>Onko tapahtumia/organisaatioita, joita täällä pitäisi näkyä?</h2>
+            <p>Ilmoita tänne lomakkeeseen tapahtumia/organisaatioita, joita haluaisit tämän sivuston seuraavan
+            </p>
+        </section>
         <section class="nyrkkeily-video">
             <video controls="metadata" poster="kuvat/video_kuva_v2.jpg" width="640" height="480">
                 <source src="media/nyrkkeily_video.mp4">
             </video>
         </section>
+        <!-- Tästä alkaa lomake. Lomakkeella ilmoitetaan joko listalta löytyvä organisaation tapahtuman, tai sitten voi ilmoittaa aivan uuden organisaation tapahtuman -->
         <section class="lomake-taytto">
             <h3>Ilmoita tapahtuma/organisaatio</h3>
             <p>Tähdellä (*) merkityt ovat pakollisia</p>
             <form action="#" method="post">
-                <!-- Jatkan tätä seuraavaan palautukseen -->
-                <!-- ensimmäinen commit ei onnustunut. Git lähetti error viestin -->
+                <fieldset>
+                    <legend>Yhteystiedot</legend>
+                    <div class="kentta">
+                        <label for="nimi">Koko nimi <span class="pakollinen">*</span></label>
+                        <input type="text" name="kokonimi" id="nimi" placeholder="Etunimi Sukunimi" autocomplete="name"
+                            maxlength="100" required>
+                    </div>
+                    <div class="kentta">
+                        <label for="sposti">Sähköposti <span class="pakollinen">*</span></label>
+                        <input type="email" name="spostiosoite" id="sposti" placeholder="etunimi.sukunimi@email.com"
+                            autocomplete="email" maxlength="100" required>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Organisaation valinta *</legend>
+                    <label for="organisaatio">Organisaatio</label>
+                    <select name="organisaatio" id="organisaatio">
+                        <option value="#">Valitse organisaatio</option>
+                        <optgroup label="Vapaaottelu">
+                            <option value="ufc">UFC</option>
+                            <option value="pfl">PFL</option>
+                            <option value="oktagon">Oktagon</option>
+                            <option value="rizin">RIZIN Fighting Federarion</option>
+                        </optgroup>
+                        <optgroup label="Muut">
+                            <option value="karare-combat">Karate Combat</option>
+                            <option value="one-championship">One Championship</option>
+                            <option value="ice-cage">Ice Cage</option>
+                            <option value="raf">RAF Real American Freestyle</option>
+                        </optgroup>
+                    </select>
+                    <div class="kentta">
+                        <label for="paiva">Ilmoita päivämäärä <span class="pakollinen">*</span></label>
+                        <input type="date" id="paiva" name="paiva" required>
+                    </div>
+                    <div class="kentta">
+                        <label for="tapahtuma-nimi">Ilmoita tapahtuman nimi<span class="pakollinen">*</span></label>
+                        <input type="text" id="tapahtuma-nimi" name="tapahtuma-nimi" placeholder="Kirjota tähän tapahtuman nimi" maxlength="100" required>
+                    </div>
+                    <div class="kentta">
+                        <label for="numero">Ilmoita tapahtuman numero </label>
+                        <input type="number" id="numero" name="numero" min="1"> 
+                        <!-- Tapahtuma ei voi olla numero yksi, mutta ylärajaa ei määritetä. Esim. UFC alkaa olemaan jo tapahtumassa 400 
+                         Kaikilla tapahtumilla ei myöskään välttämättä ole numeroa ja sen takia tuossa ei ole oletusarvoa, kun se olisi
+                         rasittavaa aina pyyhkiä oletusarvo pois.-->
+                    </div>
+                    <div class="kentta">
+                        <label for="mista">Ilmoita mistä tapahtuma on katsottavissa<span class="pakollinen">*</span></label>
+                        <input type="text" id="mista" name="mista" placeholder="Anna tähän nettiosoite" maxlength="500" required>
+                    </div>
+                    <div class="valinta">
+                        <input type="radio" id="maksullinen" name="maksullisuus" value="maksullinen" required>
+                        <label for="maksullinen">Maksullinen tapahtuma</label>
+                    </div>
+                    <div class="valinta">
+                        <input type="radio" id="ilmainen" name="maksullisuus" value="ilmainen" required>
+                        <label for="ilmainen">Ilmainen tapahtuma</label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Ilmoita muu tapahtuma, joka ei löydy listalta</legend>
+                    <div class="kentta">
+                        <label for="viesti">Kirjoita tähän tapahtuman tiedot</label>
+                        <textarea name="viesti" id="viesti" rows="10"
+                            placeholder="Kirjota tähän lisätietoja"></textarea>
+                    </div>
+                    <div class="valinta">
+                        <input type="checkbox" id="tiedot-oikeat" name="tiedot-oikeat" value="kylla">
+                        <label for="tiedot-oikeat">Olen tarkistanut tiedot oikeaksi <span
+                                class="pakollinen">*</span></label>
+                    </div>
+                </fieldset>
+
+                <div class="painikkeet">
+                    <button type="submit">Lähetä</button>
+                    <button type="reset" class="tyhjenna">Tyhjennä</button>
+                </div>
             </form>
         </section>
 
